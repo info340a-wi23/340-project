@@ -3,19 +3,7 @@ body {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     margin: 50px;
 }
-.para-1 {
-    text-indent: 5%;
-    line-height: 1.7;
-}
-.para-2 { 
-    text-indent: 5%;
-    line-height: 1.7;
-}
-.para-3 {
-    text-indent: 5%;
-    line-height: 1.7;
-}
-.para-4 { 
+.paragraph {
     text-indent: 5%;
     line-height: 1.7;
 }
