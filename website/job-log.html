@@ -2,25 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="websiteimg/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Job Trackr</title>
   <!--  Normalize styling across browsers -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/website.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="../website/index.html">Home</a></li>
-            <li><a href="../website/job-log.html">Job Tracker</a></li>
-            <li><a href="../website/quiz.html">Quiz</a></li>
-            <li><a href="../website/login.html">Login</a></li>
-        </ul>
-    </nav>
-
-    <h1>Job Tracker</h1>
-    
+    <div class="banner">
+        <img src="../website/websiteimg/jobs.jpg.png" alt="Website Logo" id="logo">
+        <h1 class="text-center accent" id="title">Job Trackr</h1>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="../website/index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Career quiz</a></li>
+                    <li class="active"><a href="../website/job-log.html">Job log</a></li>
+                    <li class="ml-auto mr-2"><a href="#" class="btn btn-light login-text">Log in</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="job-track">
+        <div class="p-5 text-center bg-light">
+        <div class="boxed">
+                <h1 class="mb-3">Job Log</h1>
+                <p>Track your applications to meet your career goals!</p>
+        </div>
+        <h4 class="mb-3">No Jobs Tracked</h4>
+        <a class="btn btn-light" href="../website/add-job.html" role="button">Add a job here!</a>
+    </div>
+</div>
 
 </body>

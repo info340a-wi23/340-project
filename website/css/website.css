@@ -1,61 +1,14 @@
 body {
-    background-color: #C6D6C7;
-    color: #464A46;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
 }
-
-/* Nav */
 
 .banner {
-    padding: .5rem;
-    background-color: #A2BDA6;
-    color: #E7F0E7; 
+    background-color: #3c6e71;
+    padding: 20px;
 }
-
-.banner h1 {
-    display: inline;
-}
-
-nav ul {
-    margin-right: 2rem;
-    text-align:right;
-}
-
-nav li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav a {
-    color: #464A46;
-    text-decoration: none;
-}
-
-nav a:hover { 
-    border-bottom: .5rem solid #E7F0E7; 
-    transition: .25s ease-out;
-}
-
-/* Checklist Page */
-
-.card {
-    background-color: #E7F0E7; 
-    padding: 1rem;
-    margin: 4rem;  
-}
-
-.card-body{
-    margin: 1rem;
-    text-align: left;
-}
-
-.checklist {
-    margin: 2rem;
-}
-
-
+.
 .accent {
-    color: #8A6742;
+    color: white;
 }
 
 .text {
@@ -101,7 +54,6 @@ nav a:hover {
     color: black;
 }
 
-
 @media (min-width: 598px) {
     .home {
         background-size: cover;
@@ -124,4 +76,28 @@ nav a:hover {
     .home {
         background-size: contain;
     }
+}
+
+.job-track {
+    text-align: center;
+    padding-top: 6rem;
+}
+.boxed {
+    border: 3px solid #2f394d;
+    box-sizing: content-box;
+    background-color: #3c6e71;
+    height: 10rem;
+    padding: 60px;
+}
+.boxed, .text { 
+    color: white;
+}
+form, input { 
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.add-job-header {
+    text-align: center;
 }
