@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="A website to track job applications">
-  <meta name="author" content="Emily Hale, Andrew Le, Sonia Dashti, Tyrell Garza">
-  <title>Job Trackr</title>
-  <!--  Normalize styling across browsers -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Info 340 Group AB2">
+    <meta name="Proposal" content="This is the homepage of the website">
+    <title>Job Trackr</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/website.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="../website/index.html">Home</a></li>
-            <li><a href="../website/job-log.html">Job Tracker</a></li>
-            <li><a href="../website/quiz.html">Quiz</a></li>
-            <li><a href="../website/login.html">Login</a></li>
-        </ul>
-    </nav>
+    <div class="banner">
+        <img src="../website/websiteimg/jobs.jpg.png" alt="Website Logo" id="logo">
+        <h1 class="text-center accent" id="title">Job Trackr</h1>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Career quiz</a></li>
+                    <li><a href="#">Job log</a></li>
+                    <li class="ml-auto mr-2"><a href="#" class="btn btn-primary login-text">Log in</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="home">
+            <div class="welcome-header">
+                <h1>Welcome to Job Trackr!</h1>
+            </div>
+            <p> Job Trackr is a career service tool that supports users during their job search. Users can take a quiz
+                that lets them know what entities they need on their resume, and they are provided with a score that
+                shows what the what entities are missing from their resume. Users can also add jobs they have applied
+                to, helping them keep track of applied jobs. </p>
+        </div>
+    </main>
+    <div>
+        <footer>
+            <p>Author: Info 340 AB2</p>
+            <p>© 2022 iSchool</p>
+        </footer>
+    </div>
 </body>
+</html>

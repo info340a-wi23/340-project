@@ -31,7 +31,7 @@ body {
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
     text-align: center;
     font-size: 15px;
-    background-image: url(../img/homescreen.jpg);
+    background-image: url(../websiteimg/homescreen.jpg);
     opacity: .90;
     background-position: 0;
     background-size: cover;
