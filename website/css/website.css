@@ -1,13 +1,12 @@
 body {
-    background-color: white;
+    background-color: #C4D1D2; 
 }
+
+/* Nav */
 
 .banner {
     background-color: #3c6e71;
     padding: 20px;
-}
-.accent {
-    color: white;
 }
 
 .text {
@@ -25,6 +24,13 @@ body {
     float: left;
     margin-right: 10px;
 }
+
+nav a:hover { 
+    border-bottom: .6rem solid #E1EBED; 
+    transition: .25s ease-out;
+}
+
+/* Home Page */
 
 .home {
     color: white;
@@ -54,6 +60,82 @@ body {
     color: black;
 }
 
+/* Checklist */ 
+
+.card {
+    background-color: #E1EBED; 
+    padding: 1rem;
+    margin: 4rem;  
+}
+
+.card-body{
+    margin: 2rem;
+    text-align: left;
+}
+
+.checklist {
+    margin: 2rem;
+}
+
+.checkbox input {
+    text-align: left;
+}
+
+.card img {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+/* Job Log */
+
+.job-track {
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.boxed {
+    border: 3px solid #2f394d;
+    box-sizing: content-box;
+    background-color: #3c6e71;
+    height: 10rem;
+    padding: 40px;
+}
+
+.boxed, .text { 
+    color: white;
+}
+
+form, input { 
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.add-job-header, .login-head, .centered{
+    text-align: center;
+}
+
+.dashboard { 
+    background-image: url(../websiteimg/dashboard.png);
+    background-size: cover;
+}
+
+/* Login */
+
+.login-button {
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-link {
+    color: #3c6e71;
+}
+
 @media (min-width: 598px) {
     .home {
         background-size: cover;
@@ -76,46 +158,4 @@ body {
     .home {
         background-size: contain;
     }
-}
-
-.job-track {
-    text-align: center;
-    padding-top: 6rem;
-}
-.boxed {
-    border: 3px solid #2f394d;
-    box-sizing: content-box;
-    background-color: #3c6e71;
-    height: 10rem;
-    padding: 40px;
-}
-.boxed, .text { 
-    color: white;
-}
-form, input { 
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.add-job-header, .login-head, .centered{
-    text-align: center;
-}
-
-.dashboard { 
-    background-image: url(../websiteimg/dashboard.png);
-    background-size: cover;
-}
-
-.login-button {
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 16px;
-}
-.form-link {
-    color: #3c6e71;
 }

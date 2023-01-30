@@ -14,15 +14,24 @@
 
 <body>
     <div class="banner">
-        <img src="../website/websiteimg/jobs.jpg.png" alt="Website Logo" id="logo">
-        <h1 class="">Job Trackr</h1>
-        <nav>
-            <ul>
-                <li><a href="../website/index.html">Home</a></li>
-                <li><a href="../website/job-log.html">Job Tracker</a></li>
-                <li><a href="../website/quiz.html">Checklist</a></li>
-                <li><a href="../website/login.html">Login</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../website/index.html">
+                <img src="../website/websiteimg/jobs.jpg.png" alt="Logo" width="30" height="24"class="d-inline-block align-text-top">JobTrackr</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../website/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../website/checklist.html">Checklist</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../website/job-log.html">Job Log</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../website/login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </div>
 
@@ -38,17 +47,22 @@
         <div class="card-body">
             <h5>Does Your Resume Have:</h5>
             <div class="checklist">
-                <p><input type="checkbox"> Name and contact information</p>
-                <p><input type="checkbox"> Summary of Qualifications</p>
-                <p><input type="checkbox"> Education</p>
-                <p><input type="checkbox"> Work Experience</p>
-                <p><input type="checkbox"> Other Experience</p>
-                <p><input type="checkbox"> Skills & Tools</p>
+                <p class="checkbox"><input type="checkbox"> Name and contact information</p>
+                <p class="checkbox"><input type="checkbox"> Summary of Qualifications</p>
+                <p class="checkbox"><input type="checkbox"> Education</p>
+                <p class="checkbox"><input type="checkbox"> Work Experience</p>
+                <p class="checkbox"><input type="checkbox"> Other Experience</p>
+                <p class="checkbox"><input type="checkbox"> Skills & Tools</p>
             </div>
         </div>
     </div>
-    <p class="text-center">Need help finishing your resume? Checkout these <a href="https://careers.uw.edu/resources/sample-resumes">Resume Templates</a> from University of Washington!</p>
+    <div class="card">
+        <p class="text-center">Need help finishing your resume? Here is a resume template:</p>
+        <img src="websiteimg/resume.png" alt:"resume">
+        <p class="text-center">Find more resume templates <a href="https://careers.uw.edu/resources/sample-resumes">here</a> from the University of Washington!</p>
+    </div>
     </main>
+
     <div>
         <footer>
             <p>Author: Info 340 AB2</p>
@@ -57,4 +71,5 @@
     </div>
 </body>
 </html>
+
 
