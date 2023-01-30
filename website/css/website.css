@@ -1,11 +1,58 @@
 body {
-    background-color: #fffbf0;
+    background-color: #C6D6C7;
+    color: #464A46;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Nav */
 
 .banner {
-    background-color: #BBDFB6;
+    padding: .5rem;
+    background-color: #A2BDA6;
+    color: #E7F0E7; 
 }
+
+.banner h1 {
+    display: inline;
+}
+
+nav ul {
+    margin-right: 2rem;
+    text-align:right;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #464A46;
+    text-decoration: none;
+}
+
+nav a:hover { 
+    border-bottom: .5rem solid #E7F0E7; 
+    transition: .25s ease-out;
+}
+
+/* Checklist Page */
+
+.card {
+    background-color: #E7F0E7; 
+    padding: 1rem;
+    margin: 4rem;  
+}
+
+.card-body{
+    margin: 1rem;
+    text-align: left;
+}
+
+.checklist {
+    margin: 2rem;
+}
+
 
 .accent {
     color: #8A6742;
@@ -53,6 +100,7 @@ body {
 .login-text {
     color: black;
 }
+
 
 @media (min-width: 598px) {
     .home {
