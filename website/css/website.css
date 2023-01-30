@@ -43,6 +43,11 @@ nav a:hover {
     text-align: left;
 }
 
+.upload {
+    margin-bottom: 2rem;
+}
+
+
 .checklist {
     margin: 2rem;
 }
