@@ -45,17 +45,6 @@ nav a:hover {
     padding: 5rem;
 }
 
-.login-btn {
-    background-color: tan;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
 .login-text {
     color: black;
 }
