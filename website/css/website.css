@@ -1,5 +1,6 @@
 body {
     background-color: #C4D1D2; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Nav */
@@ -7,22 +8,6 @@ body {
 .banner {
     background-color: #3c6e71;
     padding: 20px;
-}
-
-.text {
-    color: #2d2d2d;
-}
-
-#title {
-    text-align: left;
-    text-decoration: none;
-}
-
-#logo {
-    width: 80px;
-    height: 50px;
-    float: left;
-    margin-right: 10px;
 }
 
 nav a:hover { 
@@ -43,21 +28,6 @@ nav a:hover {
     background-size: cover;
     margin-top: -1rem;
     padding: 5rem;
-}
-
-.login-btn {
-    background-color: tan;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.login-text {
-    color: black;
 }
 
 /* Checklist */ 
