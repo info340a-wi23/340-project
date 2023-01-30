@@ -6,7 +6,6 @@ body {
     background-color: #3c6e71;
     padding: 20px;
 }
-.
 .accent {
     color: white;
 }
@@ -88,7 +87,7 @@ body {
     box-sizing: content-box;
     background-color: #3c6e71;
     height: 10rem;
-    padding: 60px;
+    padding: 40px;
 }
 .boxed, .text { 
     color: white;
@@ -101,4 +100,8 @@ form, input {
 }
 .add-job-header {
     text-align: center;
+}
+.dashboard { 
+    background-image: url(../websiteimg/dashboard.png);
+    background-size: cover;
 }
