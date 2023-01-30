@@ -159,3 +159,7 @@ form, input {
         background-size: contain;
     }
 }
+.data-views { 
+    max-height: 800px;
+    max-width: 1300px;
+}
