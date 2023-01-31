@@ -81,9 +81,11 @@ nav a:hover {
     text-align: center;
     padding-top: 6rem;
 }
-
+.job-track h2 { 
+    margin-top: 4rem;
+}
 .boxed {
-    border: 3px solid #2f394d;
+    border: 3px solid white;
     box-sizing: content-box;
     background-color: #3c6e71;
     height: 10rem;
@@ -93,14 +95,14 @@ nav a:hover {
 .boxed, .text { 
     color: white;
 }
-
-.submit-job { 
+.submit-job, input{ 
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
   box-sizing: border-box;
 }
-
+.submit-job, .submit-button { 
+    margin-top: 20px;
+}
 .add-job-header, .login-head, .centered{
     text-align: center;
 }
@@ -153,6 +155,8 @@ nav a:hover {
     max-height: 800px;
     max-width: 1300px;
 }
+
+/* About */
 
 .flex-container {
     display: flex;
