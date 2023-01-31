@@ -42,7 +42,7 @@ nav a:hover {
 
 .card {
     background-color: #E1EBED; 
-    padding: 1rem;
+    padding: .5rem;
     margin: 4rem;  
 }
 
@@ -55,9 +55,8 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-
 .checklist {
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .checkbox input {
@@ -67,6 +66,12 @@ nav a:hover {
 .card img {
     margin: 2rem;
     padding: 1rem;
+}
+
+p.checkbox input {
+    padding: 5rem;
+    width: 10%;
+    padding: 0;
 }
 
 /* Job Log */
