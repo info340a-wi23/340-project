@@ -17,13 +17,29 @@ html {
 
 .banner {
     background-color: #3c6e71;
-    padding: 20px;
+    padding: 10px;
+}
+
+nav ul {
+    margin-right: 2rem;
+    text-align:right;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 nav a:hover { 
     border-bottom: .6rem solid #E1EBED; 
     transition: .25s ease-out;
 }
+
 
 /* Home Page */
 
