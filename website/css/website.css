@@ -146,7 +146,7 @@ p.checkbox input {
     color: #3c6e71;
 }
 
-@media (min-width: 598px) {
+@media (min-width: 576px) {
     .home {
         background-size: cover;
     }
