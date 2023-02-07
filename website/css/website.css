@@ -20,26 +20,23 @@ html {
     padding: 10px;
 }
 
-nav ul {
-    margin-right: 2rem;
-    text-align:right;
+.navbar {
+    background-color: #e9f0f2; 
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #353737;
 }
 
 nav li {
-    display: inline;
     margin: 0 1rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover { 
-    border-bottom: .6rem solid #E1EBED; 
+.nav-link:hover { 
+    border-bottom: .6rem solid #a8bdc0; 
     transition: .25s ease-out;
 }
-
 
 /* Home Page */
 
