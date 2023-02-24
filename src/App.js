@@ -12,6 +12,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/checklist" element={<Checklist />} />
         <Route path="/add-job" element={<JobLog />} />
         <Route path="/about" element={<About />} />
