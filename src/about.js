@@ -11,7 +11,7 @@ export default function About() {
       <section className="bio">
         <div className="bio-container"> 
           <div className="bio-card">
-            <img src="aboutimg/andrew.jpeg" alt="Photo of Andrew" />
+            <img src="aboutimg/andrew.jpeg" alt="Andrew" />
             <div className="bio-text">
               <h2>Andrew Le</h2>
               <p>
@@ -20,7 +20,7 @@ export default function About() {
             </div>
           </div>
           <div className="bio-card">
-            <img src="aboutimg/sonia.jpg" alt="Photo of Sonia" />
+            <img src="aboutimg/sonia.jpg" alt="Sonia" />
             <div className="bio-text">
               <h2>Sonia Dashti</h2>
               <p>
@@ -29,7 +29,7 @@ export default function About() {
             </div>
           </div>
           <div className="bio-card">
-            <img src="aboutimg/tyrell.jpg" alt="Photo of Tyrell" />
+            <img src="aboutimg/tyrell.jpg" alt="Tyrell" />
             <div className="bio-text">
               <h2>Tyrell Garza</h2>
               <p>
@@ -38,7 +38,7 @@ export default function About() {
             </div>
           </div>
           <div className="bio-card">
-            <img src="aboutimg/emily.jpg" alt="Photo of Emily" />
+            <img src="aboutimg/emily.jpg" alt="Emily" />
             <div className="bio-text">
               <h2>Emily Hale</h2>
               <p>
