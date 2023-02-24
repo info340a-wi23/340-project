@@ -41,17 +41,20 @@ nav li {
     padding-left: 5rem;
     padding-right: 5rem;;
 }
+
 .welcome-header h2 {
         color: white;
         text-align: center;
         font-size: 30px;
 }
+
 .home p {
     padding: 5rem;
     font-size: 20px;
     text-align: center;
     margin-bottom: 2rem;
 }
+
 .home button { 
     color:#3c6e71;
     margin: 0;
@@ -60,6 +63,7 @@ nav li {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 .home-image {
     width: 50%; 
     height: auto;
@@ -156,34 +160,9 @@ p.checkbox input {
     color: #3c6e71;
 }
 
-/* Media */ 
-
-@media (min-width: 576px) {
-    .home {
-        background-size: cover;
-    }
-}
-
-@media (min-width: 768px) {
-    .home {
-        background-size: contain;
-    }
-}
-
-@media (min-width: 992px) {
-    .home {
-        background-size: cover;
-    }
-}
-
-@media (min-width: 1200px) {
-    .home {
-        background-size: contain;
-    }
-}
-.data-views { 
-    max-height: 800px;
-    max-width: 1300px;
+/* Dashboard */ 
+.filter-container {
+    margin: 1rem 4rem;
 }
 
 /* About */
@@ -251,5 +230,39 @@ th, td {
 /* Footer */
 
 footer {
-    margin-left: 1rem;
+    margin: 1rem;
+}
+
+select {
+    margin: .5rem;
+}
+
+/* Media */ 
+
+@media (min-width: 576px) {
+    .home {
+        background-size: cover;
+    }
+}
+
+@media (min-width: 768px) {
+    .home {
+        background-size: contain;
+    }
+}
+
+@media (min-width: 992px) {
+    .home {
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .home {
+        background-size: contain;
+    }
+}
+.data-views { 
+    max-height: 800px;
+    max-width: 1300px;
 }
