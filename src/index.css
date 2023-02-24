@@ -126,7 +126,7 @@ p.checkbox input {
 }
 
 .dashboard { 
-    background-image: url(../websiteimg/dashboard.png);
+    background-image: url(../../websiteimg/dashboard.png);
     background-size: cover;
 }
 
