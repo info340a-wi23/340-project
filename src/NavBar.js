@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar(props) {
@@ -10,35 +9,55 @@ function NavBar(props) {
   const closeMenu = () => setClick(false);
 
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand>
-          <Link to="/" className="navbar-logo" onClick={closeMenu}>
-            Job Trackr <i className="fas fa-leaf" />
-          </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Item>
-              <Link to="/checklist" className="nav-button" onClick={closeMenu}>
-                Checklist
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link to="/add-job" className="nav-button" onClick={closeMenu}>
-                Job Log
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link to="/about" className="nav-button" onClick={closeMenu}>
-                About
-              </Link>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+          Job Trackr <i className="fas fa-leaf" />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={handleClick}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className={`collapse navbar-collapse ${click ? 'show' : ''}`}
+          id="navbarNav"
+        >
+        <ul className="navbar-nav me-auto" style={{ display: "flex" }}>
+          <li className="nav-item" style={{ display: "inline-block" }}>
+            <Link
+              to="/checklist"
+              className="nav-link nav-button"
+              onClick={closeMenu}
+            >
+              Checklist
+            </Link>
+          </li>
+          <li className="nav-item" style={{ display: "inline-block" }}>
+            <Link
+              to="/add-job"
+              className="nav-link nav-button"
+              onClick={closeMenu}
+            >
+              Job Log
+            </Link>
+          </li>
+          <li className="nav-item" style={{ display: "inline-block" }}>
+            <Link to="/about" className="nav-link nav-button" onClick={closeMenu}>
+              About
+            </Link>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
