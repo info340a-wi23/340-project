@@ -3,7 +3,7 @@
 }
 body {
     background-color: #C4D1D2; 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -40,22 +40,41 @@ nav li {
 
 /* Home Page */
 
-.home {
+.welcome-header h1 {
     color: white;
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
     text-align: center;
-    font-size: 15px;
-    background-image: url(../public/websiteimg/homescreen.jpg);
-    opacity: .90;
-    background-position: 0;
-    background-size: cover;
+    font-size: 60px;
+    font-weight: bold;
     margin-top: 1rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;;
+}
+.welcome-header h2 {
+        color: white;
+        text-align: center;
+        font-size: 30px;
+}
+.home p {
     padding: 5rem;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
 }
-
-.login-text {
-    color: black;
+.home button { 
+    color:#3c6e71;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+.home-image {
+    width: 50%; 
+    height: auto;
+    display: block;
+    margin: auto;
+  }
 
 /* Checklist */ 
 
@@ -239,5 +258,5 @@ th, td {
 
 /* Footer */
 footer {
-    margin-top: 2rem;
+    margin-left: 1rem;
 }

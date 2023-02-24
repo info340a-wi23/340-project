@@ -24,7 +24,7 @@ export default function About() {
             <div className="bio-text">
               <h2>Sonia Dashti</h2>
               <p>
-                Hi, I’m Sonia! I am a third-year Informatics student focusing in HCI and Information Management.
+                Hi, I'm Sonia! I am a third-year Informatics student focusing in HCI and Information Management.
               </p>
             </div>
           </div>
