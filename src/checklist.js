@@ -31,10 +31,6 @@ export default function Checklist() {
       <p className="text-center">Find more resume templates <a href="https://careers.uw.edu/resources/sample-resumes">here</a> from the University of Washington!</p>
     </div>
   </main>
-  <div>
-    <footer className="footer">
-      <p>Author: Info 340 AB2</p>
-      <p>© 2022 iSchool</p>
-    </footer></div></div>
+  </div>
 );
 }

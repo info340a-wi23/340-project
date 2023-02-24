@@ -13,12 +13,6 @@ export default function Home() {
             helps them improve their resume. Users can also add jobs they have applied to and their application status to help them keep track of applied jobs. </p>
         </div>
       </main>
-      <div>
-        <footer className="footer">
-          <p>Author: Info 340 AB2</p>
-          <p>© 2022 iSchool</p>
-        </footer>
-      </div>
     </div>
   );
 }

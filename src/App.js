@@ -6,6 +6,7 @@ import JobLog from './add-job';
 import About from './about';
 import Home from './home';
 import Dashboard from './dashboard';
+import Footer from './footer'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
