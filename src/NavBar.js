@@ -12,7 +12,7 @@ function NavBar(props) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         
-        <Link to="/" className="navbar-brand" href="index.html"><img src="websiteimg/icon.png" alt="Logo" width={34} height={34} 
+        <Link to="/" className="navbar-brand" href="index.html"><img src="websiteimg/icon.png" alt="Logo" width={26} height={26} 
         className="d-inline-block align-text-top" /> JobTrackr</Link>
 
         <button
