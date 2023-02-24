@@ -4,6 +4,8 @@ import NavBar from './NavBar';
 import Checklist from './checklist';
 import JobLog from './add-job';
 import About from './about';
+import Home from './home';
+import Dashboard from './dashboard';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/checklist" element={<Checklist />} />
         <Route path="/add-job" element={<JobLog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );

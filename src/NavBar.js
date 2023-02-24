@@ -11,9 +11,10 @@ function NavBar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link to="/" className="navbar-brand" onClick={closeMenu}>
-          Job Trackr <i className="fas fa-leaf" />
-        </Link>
+        
+        <Link to="/" className="navbar-brand" href="index.html"><img src="websiteimg/icon.png" alt="Logo" width={34} height={34} 
+        className="d-inline-block align-text-top" /> JobTrackr</Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -31,6 +32,15 @@ function NavBar(props) {
           id="navbarNav"
         >
         <ul className="navbar-nav me-auto" style={{ display: "flex" }}>
+          <li className="nav-item" style={{ display: "inline-block" }}>
+            <Link
+              to="/home"
+              className="nav-link nav-button"
+              onClick={closeMenu}
+            >
+              Home
+            </Link>
+          </li>
           <li className="nav-item" style={{ display: "inline-block" }}>
             <Link
               to="/checklist"
