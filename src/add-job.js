@@ -80,10 +80,6 @@ export default function JobLog() {
          ))}
        </ul>
      </div>
-     <footer className="footer">
-       <p>Author: Info 340 AB2</p>
-       <p>© 2022 iSchool</p>
-     </footer>
    </div>
  );
 }
