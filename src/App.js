@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './NavBar';
 import Checklist from './checklist';
@@ -9,6 +9,11 @@ import Dashboard from './dashboard';
 import Footer from './footer'
 
 function App() {
+  const [jobs, setJobs] = useState([]);
+
+  const addJob = (newJob) => {
+    setJobs([...jobs, newJob]);
+  };
   return (
     <Router>
       <NavBar />
@@ -23,6 +28,8 @@ function App() {
       <Footer />
     </Router>
   );
+
 }
 
 export default App;
+

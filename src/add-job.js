@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function JobLog() {
- const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState([]);
+  const navigate = useNavigate();
 
-
- const handleSubmit = (event) => {
-   event.preventDefault();
-   const formData = new FormData(event.target);
-   const newJob = {
-     date: formData.get('applied'),
-     title: formData.get('title'),
-     company: formData.get('company'),
-     industry: formData.get('industry'),
-     status: formData.get('status'),
-   };
-   setJobs([...jobs, newJob]);
- };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const newJob = {
+      date: formData.get('applied'),
+      title: formData.get('title'),
+      company: formData.get('company'),
+      industry: formData.get('industry'),
+      status: formData.get('status'),
+    };
+    setJobs([...jobs, newJob]);
+    navigate('/dashboard', { state: { jobs: [...jobs, newJob] } });
+  };
 
  return (
    <div>
@@ -60,9 +61,7 @@ export default function JobLog() {
              <option>Rejected</option>
            </select>
            <div className="submit-button">
-             <button type="submit" className="toggle-btn">
-               Submit
-             </button>
+            <a href="./dashboard"><button type="submit" className="toggle-btn">Submit</button></a>
            </div>
          </form>
        </div>
@@ -83,3 +82,4 @@ export default function JobLog() {
    </div>
  );
 }
+
