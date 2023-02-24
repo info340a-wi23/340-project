@@ -11,11 +11,11 @@ export default function About() {
       <section className="bio">
         <div className="bio-container"> 
           <div className="bio-card">
-            <img src="aboutimg/andrew.jpeg" alt="Andrew" />
+            <img src="aboutimg/andrew.jpg" alt="Andrew" />
             <div className="bio-text">
               <h2>Andrew Le</h2>
               <p>
-                Hi, my name is Andrew and I am a third year student intending on majoring in Informatics with a minor in Entre.
+                Hi, my name is Andrew. I'm a third year student intending on majoring in Informatics with a minor in Entre.
               </p>
             </div>
           </div>
