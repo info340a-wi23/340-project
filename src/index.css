@@ -45,7 +45,7 @@ nav li {
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
     text-align: center;
     font-size: 15px;
-    background-image: url(../websiteimg/homescreen.jpg);
+    background-image: url(../public/websiteimg/homescreen.jpg);
     opacity: .90;
     background-position: 0;
     background-size: cover;
@@ -126,7 +126,7 @@ p.checkbox input {
 }
 
 .dashboard { 
-    background-image: url(../../websiteimg/dashboard.png);
+    background-image: url(../public/websiteimg/dashboard.png);
     background-size: cover;
 }
 
