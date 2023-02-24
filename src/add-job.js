@@ -1,3 +1,6 @@
+import React from 'react';
+export default function JobLog() {
+return (
 <div>
   <meta charSet="utf-8" />
   <meta name="author" content="Emily Hale" />
@@ -58,3 +61,5 @@
       <p>© 2022 iSchool</p>
     </footer>
   </div></div>
+);
+}

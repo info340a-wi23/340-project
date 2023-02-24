@@ -1,3 +1,7 @@
+import React from 'react';
+
+export default function Checklist() {
+  return (
 <div>
   <meta charSet="utf-8" />
   <meta name="author" content="Sonia Dashti" />
@@ -58,3 +62,5 @@
       <p>Author: Info 340 AB2</p>
       <p>© 2022 iSchool</p>
     </footer></div></div>
+);
+}

@@ -1,3 +1,7 @@
+import React from 'react';
+
+export default function About() {
+  return (
 <div>
   <meta charSet="utf-8" />
   <meta name="author" content="Andrew Le" />
@@ -87,3 +91,6 @@
     </footer>
   </main>
 </div>
+);
+}
+
