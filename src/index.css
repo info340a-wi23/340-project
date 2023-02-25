@@ -173,8 +173,6 @@ p.checkbox input {
 }
 
 .bio-container {
-    display: flex;
-    flex-direction: row;
     margin: 1em;
     justify-content: space-evenly;
 }
@@ -184,7 +182,7 @@ p.checkbox input {
     justify-content: center;
     flex-direction: column;
     margin: 1rem;
-    width: 100%;
+    width: 75%;
     background-color: #e9f0f2; 
 }
 
@@ -243,11 +241,30 @@ select {
     .home {
         background-size: cover;
     }
+
+    .bio-card {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+
+    .bio-card img {
+        height: 54rem;
+    }
+
 }
 
 @media (min-width: 768px) {
     .home {
         background-size: contain;
+    }
+    .bio-card {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+    .bio-card img {
+        height: 20rem;
     }
 }
 
@@ -255,11 +272,25 @@ select {
     .home {
         background-size: cover;
     }
+
+    .bio-card {
+        width: 100%
+    }
+
+    .bio-container {
+        display: flex;
+        flex-direction: row;
+    }
+
 }
 
 @media (min-width: 1200px) {
     .home {
         background-size: contain;
+    }
+    .bio-container {
+        display: flex;
+        flex-direction: row;
     }
 }
 .data-views { 
