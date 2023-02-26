@@ -28,7 +28,7 @@ export default function Checklist() {
     <div className="card">
       <p className="text-center">Need help finishing your resume? Here is a resume template:</p>
       <img src="websiteimg/Resume.png" alt='resume' />
-      <p className="text-center">Find more resume templates <a href="https://careers.uw.edu/resources/sample-resumes">here</a> from the University of Washington!</p>
+      <p className="text-center">Find more resume templates <a href="https://careers.uw.edu/resources/sample-resumes" class="text-dark">here</a> from the University of Washington!</p>
     </div>
   </main>
   </div>
