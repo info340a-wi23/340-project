@@ -12,16 +12,16 @@ export default function Checklist() {
       <div className="card-body">
         <div className="upload">
           <form action="/action_page.php"> <label>Upload your resume:</label>
-            <input type="file" id="file" name="filename" /></form>
+            <input type="file" id="file" name="filename" aria-label="input file"/></form>
         </div>
         <h3>Does Your Resume Have:</h3>
         <div className="checklist">
-          <p className="checkbox"><input type="checkbox" label="Name and Contact" /> Name and contact information</p>
-          <p className="checkbox"><input type="checkbox" label="Qualifications" /> Summary of Qualifications</p>
-          <p className="checkbox"><input type="checkbox" label="Education" /> Education</p>
-          <p className="checkbox"><input type="checkbox" label="Work Experience" /> Work Experience</p>
-          <p className="checkbox"><input type="checkbox" label="Other Experience" /> Other Experience</p>
-          <p className="checkbox"><input type="checkbox" label="Skills and Tools" /> Skills &amp; Tools</p>
+          <p className="checkbox"><input type="checkbox" aria-label="Name and Contact" /> Name and contact information</p>
+          <p className="checkbox"><input type="checkbox" aria-label="Qualifications" /> Summary of Qualifications</p>
+          <p className="checkbox"><input type="checkbox" aria-label="Education" /> Education</p>
+          <p className="checkbox"><input type="checkbox" aria-label="Work Experience" /> Work Experience</p>
+          <p className="checkbox"><input type="checkbox" aria-label="Other Experience" /> Other Experience</p>
+          <p className="checkbox"><input type="checkbox" aria-label="Skills and Tools" /> Skills &amp; Tools</p>
         </div>
       </div>
     </div>

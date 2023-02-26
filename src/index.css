@@ -80,7 +80,7 @@ nav li {
 }
 
 .card-body{
-    margin: 2rem;
+    margin: 1rem;
     text-align: left;
 }
 
@@ -261,6 +261,9 @@ select {
         margin: 4rem;  
     }
 
+    .card-body {
+        margin: 2rem;
+    }
 }
 
 @media (min-width: 992px) {
