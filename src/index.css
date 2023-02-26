@@ -76,7 +76,7 @@ nav li {
 .card {
     background-color: #E1EBED; 
     padding: .5rem;
-    margin: 4rem;  
+    margin: 1rem;  
 }
 
 .card-body{
@@ -173,17 +173,14 @@ p.checkbox input {
 }
 
 .bio-container {
-    margin: 1em;
-    justify-content: space-evenly;
+    margin: 1rem;
 }
 
 .bio-card {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    margin: 1rem;
-    width: 75%;
+    width: 100%;
     background-color: #e9f0f2; 
+    margin-bottom: 1rem;
 }
 
 .bio-card img {
@@ -243,28 +240,30 @@ select {
     }
 
     .bio-card {
-        display: flex;
         flex-direction: column;
-        width: 75%;
     }
 
     .bio-card img {
         height: 54rem;
-    }
-
+    }  
 }
 
 @media (min-width: 768px) {
     .home {
         background-size: contain;
     }
+
     .bio-card {
-        display: flex;
         flex-direction: column;
-        width: 75%;
+        display: inline-flex;
     }
+
     .bio-card img {
         height: 20rem;
+    }
+
+    .card {
+        margin: 4rem;  
     }
 }
 
@@ -274,14 +273,13 @@ select {
     }
 
     .bio-card {
-        width: 100%
+        margin: 1rem;
     }
 
     .bio-container {
         display: flex;
         flex-direction: row;
     }
-
 }
 
 @media (min-width: 1200px) {
@@ -293,6 +291,7 @@ select {
         flex-direction: row;
     }
 }
+
 .data-views { 
     max-height: 800px;
     max-width: 1300px;
