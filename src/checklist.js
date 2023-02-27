@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Checklist() {
+export default function Checklist(props) {
   return (
 <div>
   <main>
     <header className="text-center">
-      <h1>Is Your Resume Complete?</h1>
+      <h1>{props.title}</h1>
       <h2 className="mx-5">Your resume is essential in your job applications. Answer these questions to find out if you have everything you need on it!</h2>     
     </header>
     <div className="card">
