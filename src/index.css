@@ -139,11 +139,6 @@ p.checkbox input {
     text-align: center;
 }
 
-.dashboard { 
-    background-image: url(../public/websiteimg/dashboard.png);
-    background-size: cover;
-}
-
 /* Login */
 
 .login-button {
