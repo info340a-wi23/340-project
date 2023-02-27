@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+function JobList(props) {
+  return (
+    <ul>
+      {props.jobs.map((job, index) => (
+        <li key={index}>
+          <p>Date: {job.date}</p>
+          <p>Title: {job.title}</p>
+          <p>Company: {job.company}</p>
+          <p>Industry: {job.industry}</p>
+          <p>Status: {job.status}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function JobLog() {
   const [jobs, setJobs] = useState([]);
   const navigate = useNavigate();
@@ -67,17 +83,7 @@ export default function JobLog() {
        </div>
      </main>
      <div>
-       <ul>
-         {jobs.map((job, index) => (
-           <li key={index}>
-             <p>Date: {job.date}</p>
-             <p>Title: {job.title}</p>
-             <p>Company: {job.company}</p>
-             <p>Industry: {job.industry}</p>
-             <p>Status: {job.status}</p>
-           </li>
-         ))}
-       </ul>
+       <JobList jobs={jobs} />
      </div>
    </div>
  );
