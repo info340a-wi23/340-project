@@ -23,7 +23,7 @@ function NavBar(props) {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={handleClick}
+          onClick={props.event}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -36,7 +36,7 @@ function NavBar(props) {
             <Link
               to="/home"
               className="nav-link nav-button"
-              onClick={closeMenu}
+              onClick={props.event}
             >
               Home
             </Link>
@@ -45,7 +45,7 @@ function NavBar(props) {
             <Link
               to="/checklist"
               className="nav-link nav-button"
-              onClick={closeMenu}
+              onClick={props.event}
             >
               Checklist
             </Link>
@@ -54,13 +54,13 @@ function NavBar(props) {
             <Link
               to="/add-job"
               className="nav-link nav-button"
-              onClick={closeMenu}
+              onClick={props.event}
             >
               Job Log
             </Link>
           </li>
           <li className="nav-item" style={{ display: "inline-block" }}>
-            <Link to="/about" className="nav-link nav-button" onClick={closeMenu}>
+            <Link to="/about" className="nav-link nav-button" onClick={props.event}>
               About
             </Link>
           </li>
