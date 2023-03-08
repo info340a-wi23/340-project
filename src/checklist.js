@@ -16,12 +16,13 @@ export default function Checklist(props) {
         </div>
         <h3>Does Your Resume Have:</h3>
         <div className="checklist">
-          <p className="checkbox"><input type="checkbox" aria-label="Name and Contact" /> Name and contact information</p>
-          <p className="checkbox"><input type="checkbox" aria-label="Qualifications" /> Summary of Qualifications</p>
-          <p className="checkbox"><input type="checkbox" aria-label="Education" /> Education</p>
-          <p className="checkbox"><input type="checkbox" aria-label="Work Experience" /> Work Experience</p>
-          <p className="checkbox"><input type="checkbox" aria-label="Other Experience" /> Other Experience</p>
-          <p className="checkbox"><input type="checkbox" aria-label="Skills and Tools" /> Skills &amp; Tools</p>
+          
+          <p className="checkbox"><input type="checkbox" id="name" /><label htmlFor='name'>Name and contact information</label></p>
+          <p className="checkbox"><input type="checkbox" id="qualifications" /><label htmlFor='qualifications'>Summary of Qualifications</label></p>
+          <p className="checkbox"><input type="checkbox" id="education" /><label htmlFor="education">Education</label></p>
+          <p className="checkbox"><input type="checkbox" id="work_experience" /><label htmlFor="work_experience">Work Experience</label></p>
+          <p className="checkbox"><input type="checkbox" id="other_experience" /><label htmlFor="other_experience">Other Experience</label></p>
+          <p className="checkbox"><input type="checkbox" id="skills_and_tools" /><label htmlFor="skills_and_tools">Skills &amp; Tools</label></p>
         </div>
       </div>
     </div>
