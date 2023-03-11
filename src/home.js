@@ -15,7 +15,7 @@ export default function Home() {
             helps them improve their resume. Users can also add jobs they have applied to and their application status to help them keep track of applied jobs. 
           </p>
           <Link to="/add-job">
-            <button type="button" class="btn btn-light btn-lg">Go to Job Log</button>
+            <button type="button" className="btn btn-light btn-lg">Go to Job Log</button>
           </Link>
           <img src={`${process.env.PUBLIC_URL}/websiteimg/homeimage.png`} alt="Home" className="home-image"/>
         </div>
