@@ -8,7 +8,7 @@ export default function Home() {
         <div className="home">
           <header className="welcome-header">
             <h1>Welcome to Job Trackr </h1>
-            <h2>Stay organized in your job hunt</h2>
+            <p>Stay organized in your job hunt</p>
           </header>
           <p> Job Trackr is a career service tool that supports users during their job search. Users can upload their resume
             and use a checklist to see what entities they need on their resume and are provided with a resume template that
