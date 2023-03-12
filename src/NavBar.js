@@ -1,19 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getAuth } from 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 
 function NavBar(props) {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
-
-  const closeMenu = () => setClick(false);
-
-  const handleSignOut = (event) => {
-    handleSignOut(getAuth());
-  
   const currentUser = props.currentUser;
+  const handleSignOut = (event) => {
+    signOut(getAuth());
   }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -70,17 +66,17 @@ function NavBar(props) {
               About
             </Link>
           </li>
-          <li className="nav-item" style={{ display: "inline-block" }}>
-            <Link
-              to="/login"
-              className="nav-link nav-button"
-              onClick={handleClick}
-            >
-              Login
-            </Link>
-          </li>
         </ul>
         </div>
+        <div className="login-navbar">
+        {currentUser ? (
+          <button className="btn btn-light btn-sm" 
+          onClick={handleSignOut}>Sign Out</button> )
+          : (
+          <button className="btn btn-light btn-sm" style={{ display: "inline-block" }}> 
+          <a href="/login" className="login">Login</a></button>
+          )}
+          </div>
       </div>
     </nav>
   );

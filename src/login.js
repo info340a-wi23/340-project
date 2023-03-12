@@ -20,7 +20,7 @@ const firebaseUIConfig = {
   }
 }
 
-//the React compnent to render
+//the React component to render
 export default function Login(props) {
 const currentUser = props.currentUser;
 const auth = getAuth(); //access the "authenticator"

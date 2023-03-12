@@ -45,7 +45,7 @@ export default function App() {
   }
   return (
     <Router>
-      <NavBar />
+      <NavBar currentUser={currentUser}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checklist" element={<Checklist title="Resume Checklist"/>} />

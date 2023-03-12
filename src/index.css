@@ -29,6 +29,14 @@ nav li {
     transition: .25s ease-out;
 }
 
+.login-navbar {
+    color:#3c6e71;
+    element:
+}
+.login-navbar:hover {
+    border-bottom: .6rem solid #a8bdc0; 
+    transition: .25s ease-out;
+}
 /* Home Page */
 .welcome-header h1 {
     color: #3c6e71;
