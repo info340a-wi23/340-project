@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getAuth } from 'firebase/auth';
 
 function NavBar(props) {
   const [click, setClick] = useState(false);
@@ -8,6 +9,11 @@ function NavBar(props) {
 
   const closeMenu = () => setClick(false);
 
+  const handleSignOut = (event) => {
+    handleSignOut(getAuth());
+  
+  const currentUser = props.currentUser;
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
