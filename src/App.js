@@ -7,6 +7,7 @@ import About from './about';
 import Home from './home';
 import Dashboard from './dashboard';
 import Footer from './footer'
+import MySignInScreen from './login';
 
 function App() {
   const [jobs, setJobs] = useState([]);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<MySignInScreen/>} />
       </Routes>
       <Footer />
     </Router>
