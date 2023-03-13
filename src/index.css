@@ -29,10 +29,6 @@ nav li {
     transition: .25s ease-out;
 }
 
-.login-navbar {
-    color:#3c6e71;
-    element:
-}
 .login-navbar:hover {
     border-bottom: .6rem solid #a8bdc0; 
     transition: .25s ease-out;
@@ -120,6 +116,15 @@ p.checkbox input {
 
 /* Job Log */
 
+.add-job-header {
+    color: #3c6e71;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
 .job-track {
     text-align: center;
     padding-top: 6rem;
@@ -146,9 +151,6 @@ p.checkbox input {
 .submit-job, .submit-button { 
     margin-top: 20px;
 }
-.add-job-header, .login-head, .centered{
-    text-align: center;
-}
 
 /* Login */
 
@@ -170,7 +172,18 @@ p.checkbox input {
 .filter-container {
     margin: 1rem 4rem;
 }
-
+.dashboard-header h1 {
+    color: #3c6e71;
+    text-align: center;
+    font-size: px;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+.table-container {
+    margin: 1.3rem;
+}
 /* About */
 
 .flex-container {

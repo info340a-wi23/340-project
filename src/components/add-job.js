@@ -32,9 +32,9 @@ export default function JobLog() {
       industry: formData.get('industry'),
       status: formData.get('status'),
     };
-    //setJobs([...jobs, newJob]);
+    setJobs([...jobs, newJob]);
     firebasePush(jobsRef, newJob);
-    navigate('/dashboard', { state: { jobs: [...jobs, newJob] } });
+    navigate('/dashboard');
   };
 
   const database = getDatabase();
@@ -82,7 +82,7 @@ export default function JobLog() {
              <option>Rejected</option>
            </select>
            <div className="submit-button">
-             <button type="submit" className="toggle-btn">Submit</button>
+             <button type="submit" className="btn btn-light btn-sm">Submit</button>
            </div>
          </form>
        </div>

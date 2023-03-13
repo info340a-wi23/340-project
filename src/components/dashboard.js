@@ -15,8 +15,9 @@ export default function Dashboard() {
 
   return (
     <div>
-      <header>
-        <h1 className="text-center">Dashboard</h1>
+      <header className="dashboard-header">
+        <h1>Dashboard</h1>
+       </header>
         <div className="filter-container">
           <label htmlFor="status-filter">Filter by Status:</label>
           <select id="status-filter" onChange={handleFilterChange} value={statusFilter}>
@@ -26,10 +27,10 @@ export default function Dashboard() {
             <option value="Offer Pending">Offer Pending</option>
             <option value="Rejected">Rejected</option>
           </select>
-          <button onClick={() => setStatusFilter('All')}>Clear Filter</button>
+          <button type="button" className="btn btn-light btn-sm" onClick={() => setStatusFilter('All')}>Clear Filter</button>
         </div>
-      </header>
       <main>
+        <div className="table-container">
         <table>
           <thead>
             <tr>
@@ -52,6 +53,7 @@ export default function Dashboard() {
             ))}
           </tbody>
         </table>
+        </div>
       </main>
     </div>
   );
