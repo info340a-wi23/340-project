@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getDatabase, ref, set, push as firebasePush } from 'firebase/database';
+
 
 function JobList(props) {
   return (
@@ -19,7 +21,6 @@ function JobList(props) {
 
 export default function JobLog() {
   const [jobs, setJobs] = useState([]);
-  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,10 +32,14 @@ export default function JobLog() {
       industry: formData.get('industry'),
       status: formData.get('status'),
     };
-    setJobs([...jobs, newJob]);
+    //setJobs([...jobs, newJob]);
+    firebasePush(jobsRef, newJob);
     navigate('/dashboard', { state: { jobs: [...jobs, newJob] } });
   };
 
+  const database = getDatabase();
+  const jobsRef = ref(database, "jobs");
+  const navigate = useNavigate();
  return (
    <div>
      <main>
@@ -77,7 +82,7 @@ export default function JobLog() {
              <option>Rejected</option>
            </select>
            <div className="submit-button">
-            <a href="./dashboard"><button type="submit" className="toggle-btn">Submit</button></a>
+             <button type="submit" className="toggle-btn">Submit</button>
            </div>
          </form>
        </div>
@@ -88,4 +93,3 @@ export default function JobLog() {
    </div>
  );
 }
-

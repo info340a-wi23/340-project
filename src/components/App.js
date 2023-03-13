@@ -49,7 +49,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checklist" element={<Checklist title="Resume Checklist"/>} />
-        <Route path="/add-job" element={<JobLog />} />
+        <Route path="/add-job" element={<JobLog currentUser={currentUser}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
