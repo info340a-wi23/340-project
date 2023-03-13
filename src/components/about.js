@@ -4,7 +4,9 @@ export default function About() {
   return (
 <div>
   <main>
-    <h1 className="text-center">About GroupAB2</h1>
+    <header className="about-header">
+      <h1 className="text-center">About GroupAB2</h1>
+    </header>
     <div className="flex-container">
       <section className="header padded">
       </section>

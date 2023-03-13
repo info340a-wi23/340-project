@@ -29,7 +29,7 @@ if (currentUser.userName) { //if signed in
   return <Navigate to="/profile" />
 }
   return (
-    <div>
+    <div className="login">
       <header>
         <h1>Log in to continue</h1>
       </header>

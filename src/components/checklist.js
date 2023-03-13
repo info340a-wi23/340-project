@@ -18,19 +18,19 @@ export default function Checklist(props) {
   return (
   <div>
     <main>
-      <header className="text-center">
+      <header className="checklist-header text-center">
         <h1>{props.title}</h1>
         <p className="mx-5">Your resume is essential in your job applications. Answer these questions to find out if you have everything you need on it!</p>     
       </header>
       <div className="card">
         <div className="card-body">
-        <div className="upload">
-              <form>
-                <label>Upload your resume:</label>
-                <input type="file" id="file" name="filename" aria-label="input file" ref={fileInputRef} onChange={handleFileUpload} />
-                <div id="iframeContainer" ref={iframeContainerRef}></div>
-              </form>
-            </div>
+         <div className="upload">
+            <form>
+              <label>Upload your resume:</label>
+              <input type="file" id="file" name="filename" aria-label="input file" ref={fileInputRef} onChange={handleFileUpload} />
+              <div id="iframeContainer" ref={iframeContainerRef}></div>
+            </form>
+          </div>
           <h2>Does Your Resume Have:</h2>
           <div className="checklist">
             <p className="checkbox"><input type="checkbox" id="name" /><label htmlFor='name'>Name and contact information</label></p>

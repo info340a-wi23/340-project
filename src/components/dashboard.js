@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link} from 'react-router-dom';
 import { getDatabase, ref, onValue } from 'firebase/database';
 
 export default function Dashboard() {
@@ -50,6 +50,11 @@ export default function Dashboard() {
         </select>
         <button type="button" className="btn btn-light btn-sm" onClick={() => setStatusFilter('All')}>Clear Filter</button>
       </div>
+      <div className="add-a-job">
+        <Link to="/add-job">
+          <button type="button" className="btn btn-light btn-lg">Add a job</button>
+        </Link>   
+      </div>   
       <main>
         <div className="table-container">
           <table>
