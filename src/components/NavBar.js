@@ -52,6 +52,7 @@ function NavBar(props) {
                 Checklist
               </Link>
             </li>
+            {currentUser && (
             <li className="nav-item" style={{ display: "inline-block" }}>
               <Link
                 to="/add-job"
@@ -61,6 +62,7 @@ function NavBar(props) {
                 Job Log
               </Link>
             </li>
+            )}
             <li className="nav-item" style={{ display: "inline-block" }}>
               <Link to="/about" className="nav-link nav-button" onClick={handleClick}>
                 About
@@ -75,7 +77,7 @@ function NavBar(props) {
             )}
             {currentUser ? (
               <li className="nav-item" style={{ display: "inline-block" }}>
-                <Link to="/login" className="nav-link nav-button" onClick={handleSignOut}>
+                <Link to="/" className="nav-link nav-button" onClick={handleSignOut}>
                   Sign Out
                 </Link>
               </li>
