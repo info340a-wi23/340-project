@@ -1,5 +1,5 @@
-import { getDatabase, ref, set } from 'firebase/database';
-import React, { useState } from 'react';
+import { getDatabase, ref, set, onValue } from 'firebase/database';
+import React, { useState, useEffect } from 'react';
 import ProfileForm from './ProfileForm';
 import { Link } from 'react-router-dom';
 
@@ -9,6 +9,19 @@ export default function Profile(props) {
   const [skills, setSkills] = useState(props.currentUser.skills || '');
   const [qualifications, setQualifications] = useState(props.currentUser.qualifications || '');
   const [bio, setBio] = useState(props.currentUser.bio || '');
+  const [jobsAppliedTo, setJobsAppliedTo] = useState([]);
+
+  useEffect(() => {
+    const db = getDatabase();
+    const userJobsRef = ref(db, `users/${props.currentUser.uid}/jobs`);
+    onValue(userJobsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const jobs = Object.values(data);
+        setJobsAppliedTo(jobs);
+      }
+    });
+  }, [props.currentUser]);
 
   const handleSave = (newProfile) => {
     const db = getDatabase();
@@ -19,6 +32,8 @@ export default function Profile(props) {
     setBio(newProfile.bio);
     setIsEditing(false);
   }
+
+  const jobsAppliedToCount = jobsAppliedTo.length;
 
   return (
     <div>
@@ -36,6 +51,7 @@ export default function Profile(props) {
               <p>Skills: {skills}</p>
               <p>Qualifications: {qualifications}</p>
               <p>Bio: {bio}</p>
+              <p>Jobs Applied To: {jobsAppliedToCount}</p>
               <button type="button" className="btn btn-light btn-lg" onClick={() => setIsEditing(true)}>Edit Profile</button>
             </div>
           )}
