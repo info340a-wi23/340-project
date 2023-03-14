@@ -30,7 +30,7 @@ if (currentUser.userName) { //if signed in
 }
   return (
     <div className="login">
-      <header className="login-header">
+      <header>
         <h1>Log in to continue</h1>
       </header>
       <p>By signing in you can access your dashboard</p>

@@ -78,7 +78,6 @@ nav li {
 .checklist-header {
     color: #3c6e71;
     text-align: center;
-    font-size: 50px;
     margin-top: 1rem;
     padding-top: 1rem;
 }
@@ -127,7 +126,6 @@ p.checkbox input {
 .add-job-header {
     color: #3c6e71;
     text-align: center;
-    font-size: 50px;
     margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -161,8 +159,12 @@ p.checkbox input {
 }
 
 /* Login */
-.login-header {
-
+.login {
+    color: #3c6e71;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 .login-button {
@@ -196,11 +198,11 @@ p.checkbox input {
 .dashboard-header h1 {
     color: #3c6e71;
     text-align: center;
-    font-size: px;
     margin-top: 1rem;
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
+
 .table-container {
     margin: 1.3rem;
 }
@@ -209,7 +211,6 @@ p.checkbox input {
 .about-header {
     color: #3c6e71;
     text-align: center;
-    font-size: 50px;
     margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -279,21 +280,10 @@ select {
     margin: .5rem;
 }
 
-/* Login */ 
-.login {
-    color: #3c6e71;
-    text-align: center;
-    font-size: px;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-}
-
 /* Profile */ 
 .profile-header {
     color: #3c6e71;
     text-align: center;
-    font-size: 50px;
     margin-top: 1rem;
     padding-top: 1rem;
 }
