@@ -92,8 +92,8 @@ export default function Dashboard(props) {
       <div className="add-a-job">
         <Link to="/add-job">
           <button type="button" className="btn btn-light btn-lg">Add a job</button>
-        </Link>   
-      </div>  
+        </Link>
+      </div>
       <main>
         <div className="table-container">
           <table>

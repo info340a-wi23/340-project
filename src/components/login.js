@@ -22,12 +22,12 @@ const firebaseUIConfig = {
 
 //the React component to render
 export default function Login(props) {
-const currentUser = props.currentUser;
-const auth = getAuth(); //access the "authenticator"
+  const currentUser = props.currentUser;
+  const auth = getAuth(); //access the "authenticator"
 
-if (currentUser.userName) { //if signed in
-  return <Navigate to="/profile" />
-}
+  if (currentUser.userName) { //if signed in
+    return <Navigate to="/profile" />
+  }
   return (
     <div className="login">
       <header>

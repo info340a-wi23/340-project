@@ -13,11 +13,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 
 export default function App() {
-    const [jobs, setJobs] = useState([]);
     const [currentUser, setCurrentUser] = useState('');
-    const addJob = (newJob) => {
-      setJobs([...jobs, newJob]);
-    };
     useEffect(() => {
       const auth = getAuth();
       onAuthStateChanged(auth, (firebaseUser) => {
@@ -35,14 +31,7 @@ export default function App() {
           }
       });
     }, [])
-    function ProtectedPage(props) {
-      if(props.currentUser.userName === "") { 
-          return <Navigate to="/login" />;
-      }
-      else { 
-          return <Outlet />;
-      }
-  }
+
   return (
     <Router>
       <NavBar currentUser={currentUser}/>

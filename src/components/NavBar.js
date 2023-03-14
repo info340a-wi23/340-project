@@ -75,16 +75,16 @@ function NavBar(props) {
             )}
             {currentUser ? (
               <li className="nav-item" style={{ display: "inline-block" }}>
-              <Link to="/login" className="nav-link nav-button" onClick={handleSignOut}>
-                Sign Out
-              </Link>
-            </li>
+                <Link to="/login" className="nav-link nav-button" onClick={handleSignOut}>
+                  Sign Out
+                </Link>
+              </li>
             ) : (
               <li className="nav-item" style={{ display: "inline-block" }}>
-              <Link to="/login" className="nav-link nav-button" onClick={handleClick}>
-                Login
-              </Link>
-            </li>
+                <Link to="/login" className="nav-link nav-button" onClick={handleClick}>
+                  Login
+                </Link>
+              </li>
             )}
           </ul>
         </div>
