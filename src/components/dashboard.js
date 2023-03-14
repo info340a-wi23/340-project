@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link} from 'react-router-dom';
-import { getDatabase, ref, onValue } from 'firebase/database';
+import { getDatabase, ref, onValue, update } from 'firebase/database';
 
 export default function Dashboard() {
   const location = useLocation();
@@ -32,6 +32,24 @@ export default function Dashboard() {
     setStatusFilter(event.target.value);
   };
 
+  const handleStatusChange = (jobId, status) => {
+    const database = getDatabase();
+    const jobRef = ref(database, `jobs/${jobId}`);
+    update(jobRef, { status })
+      .then(() => {
+        const updatedJobsList = jobsList.map((job) => {
+          if (job.id === jobId) {
+            return { ...job, status };
+          }
+          return job;
+        });
+        setJobsList(updatedJobsList);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const filteredJobs = statusFilter === 'All' ? jobsList : jobsList.filter(job => job.status === statusFilter);
 
   return (
@@ -60,11 +78,11 @@ export default function Dashboard() {
           <table>
             <thead>
               <tr>
-                <th>Date</th>
+                <th >Date</th>
                 <th>Title</th>
                 <th>Company</th>
                 <th>Industry</th>
-                <th>Status</th>
+                <th style={{ width: '100px' }}>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -74,7 +92,14 @@ export default function Dashboard() {
                   <td>{job.title}</td>
                   <td>{job.company}</td>
                   <td>{job.industry}</td>
-                  <td>{job.status}</td>
+                  <td>
+                    <select value={job.status} onChange={(event) => handleStatusChange(job.id, event.target.value)}>
+                      <option value="Applied">Applied</option>
+                      <option value="Interview">Interview</option>
+                      <option value="Offer Pending">Offer Pending</option>
+                      <option value="Rejected">Rejected</option>
+                    </select>
+                  </td>
                 </tr>
               ))}
             </tbody>
