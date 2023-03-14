@@ -207,6 +207,22 @@ p.checkbox input {
     margin: 1.3rem;
 }
 
+table {
+    background: #e9f0f2;
+    width: 90%;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+th {
+  background-color: #a8bdc0; 
+}
+
 /* About */
 .about-header {
     color: #3c6e71;
@@ -252,24 +268,6 @@ p.checkbox input {
     margin: 2rem;
 }
 
-/* Dashboard */
-
-table {
-    background: #e9f0f2;
-    width: 90%;
-    margin: 0 auto;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #a8bdc0; 
-  }
-
 /* Footer */
 
 footer {
@@ -309,9 +307,6 @@ select {
     margin-top: 3rem;
 }
 
-/* Profile Form */ 
-
-
 /* Media */ 
 
 @media (min-width: 576px) {
@@ -325,7 +320,7 @@ select {
 
     .bio-card img {
         height: 54rem;
-    }  
+    } 
 }
 
 @media (min-width: 768px) {
