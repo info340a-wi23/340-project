@@ -29,10 +29,6 @@ nav li {
     transition: .25s ease-out;
 }
 
-.login-navbar:hover {
-    border-bottom: .6rem solid #a8bdc0; 
-    transition: .25s ease-out;
-}
 /* Home Page */
 .welcome-header h1 {
     color: #3c6e71;
@@ -286,9 +282,23 @@ select {
 }
 
 /* Profile */ 
+.profile-header {
+    color: #3c6e71;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
 .profile {
     text-align: center;
     padding: .5rem;
+}
+
+.profile-welcome {
+    font-size: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .profile button {
@@ -298,15 +308,7 @@ select {
 
 .dashboard-link p {
     font-size: 20px;
-    margin-top: 4rem;
-}
-
-.profile-header {
-    color: #3c6e71;
-    text-align: center;
-    font-size: 50px;
-    margin-top: 1rem;
-    padding-top: 1rem;
+    margin-top: 3rem;
 }
 
 /* Profile Form */ 
