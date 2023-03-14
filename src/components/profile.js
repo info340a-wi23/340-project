@@ -23,9 +23,9 @@ export default function Profile(props) {
       if (data) {
         const jobs = Object.values(data);
         setJobsAppliedTo(jobs);
-        setJobsInterviewCount(jobs.filter(job => job.status === 'interview').length);
-        setJobsOfferPendingCount(jobs.filter(job => job.status === 'offer pending').length);
-        setJobsRejectedCount(jobs.filter(job => job.status === 'rejected').length);
+        setJobsInterviewCount(jobs.filter(job => job.status === 'Interview').length);
+        setJobsOfferPendingCount(jobs.filter(job => job.status === 'Offer Pending').length);
+        setJobsRejectedCount(jobs.filter(job => job.status === 'Rejected').length);
       }
     });
   }, [props.currentUser]);
@@ -41,6 +41,7 @@ export default function Profile(props) {
   }
 
   const jobsAppliedToCount = jobsAppliedTo.length;
+  
 
   return (
     <div>
@@ -55,11 +56,8 @@ export default function Profile(props) {
             <ProfileForm currentUser={props.currentUser} onSave={handleSave} />
           ) : (
             <div className="profile-info">
-              <p>Skills: {skills}</p>
-              <p>Qualifications: {qualifications}</p>
-              <p>Bio: {bio}</p>
-              <p>Total Jobs Applied To: {jobsAppliedToCount}</p>
-              <p>Job Interviews: {jobsInterviewCount}</p>
+                <p>Total Jobs Applied To: {jobsAppliedToCount}</p>
+                <p>Job Interviews: {jobsInterviewCount}</p>
                 <p>Job Offer Pendings: {jobsOfferPendingCount}</p>
                 <p>Job Rejections: {jobsRejectedCount}</p>
               <button type="button" className="btn btn-light btn-lg" onClick={() => setIsEditing(true)}>Edit Profile</button>
