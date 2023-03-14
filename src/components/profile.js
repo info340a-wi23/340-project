@@ -10,6 +10,10 @@ export default function Profile(props) {
   const [qualifications, setQualifications] = useState(props.currentUser.qualifications || '');
   const [bio, setBio] = useState(props.currentUser.bio || '');
   const [jobsAppliedTo, setJobsAppliedTo] = useState([]);
+  const [jobsInterviewCount, setJobsInterviewCount] = useState(0);
+  const [jobsOfferPendingCount, setJobsOfferPendingCount] = useState(0);
+  const [jobsRejectedCount, setJobsRejectedCount] = useState(0);
+
 
   useEffect(() => {
     const db = getDatabase();
@@ -19,6 +23,9 @@ export default function Profile(props) {
       if (data) {
         const jobs = Object.values(data);
         setJobsAppliedTo(jobs);
+        setJobsInterviewCount(jobs.filter(job => job.status === 'interview').length);
+        setJobsOfferPendingCount(jobs.filter(job => job.status === 'offer pending').length);
+        setJobsRejectedCount(jobs.filter(job => job.status === 'rejected').length);
       }
     });
   }, [props.currentUser]);
@@ -51,7 +58,10 @@ export default function Profile(props) {
               <p>Skills: {skills}</p>
               <p>Qualifications: {qualifications}</p>
               <p>Bio: {bio}</p>
-              <p>Jobs Applied To: {jobsAppliedToCount}</p>
+              <p>Total Jobs Applied To: {jobsAppliedToCount}</p>
+              <p>Job Interviews: {jobsInterviewCount}</p>
+                <p>Job Offer Pendings: {jobsOfferPendingCount}</p>
+                <p>Job Rejections: {jobsRejectedCount}</p>
               <button type="button" className="btn btn-light btn-lg" onClick={() => setIsEditing(true)}>Edit Profile</button>
             </div>
           )}
