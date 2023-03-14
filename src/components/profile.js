@@ -51,7 +51,7 @@ export default function Profile(props) {
             <div className="profile-info">
                 <p>Total Jobs Applied To: {jobsAppliedToCount}</p>
                 <p>Job Interviews: {jobsInterviewCount}</p>
-                <p>Job Offer Pendings: {jobsOfferPendingCount}</p>
+                <p>Job Offers Pending: {jobsOfferPendingCount}</p>
                 <p>Job Rejections: {jobsRejectedCount}</p>
             </div>
             <div className="dashboard-link">
