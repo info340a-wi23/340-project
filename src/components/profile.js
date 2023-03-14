@@ -1,8 +1,6 @@
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 import React, { useState, useEffect } from 'react';
-import ProfileForm from './ProfileForm';
 import { Link } from 'react-router-dom';
-
 
 export default function Profile(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -13,7 +11,6 @@ export default function Profile(props) {
   const [jobsInterviewCount, setJobsInterviewCount] = useState(0);
   const [jobsOfferPendingCount, setJobsOfferPendingCount] = useState(0);
   const [jobsRejectedCount, setJobsRejectedCount] = useState(0);
-
 
   useEffect(() => {
     const db = getDatabase();
@@ -42,7 +39,6 @@ export default function Profile(props) {
 
   const jobsAppliedToCount = jobsAppliedTo.length;
   
-
   return (
     <div>
       <main>
@@ -59,7 +55,6 @@ export default function Profile(props) {
                 <p>Job Rejections: {jobsRejectedCount}</p>
             </div>
             <div className="dashboard-link">
-              <p>Dashboard</p>
               <Link to="/dashboard">
                 <button type="button" className="btn btn-light btn-lg">View Your Dashboard</button>
               </Link>  
