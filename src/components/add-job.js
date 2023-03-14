@@ -19,7 +19,8 @@ function JobList(props) {
   );
 }
 
-export default function JobLog() {
+export default function JobLog(props) {
+  const currentUser = props.currentUser;
   const [jobs, setJobs] = useState([]);
 
   const handleSubmit = (event) => {
@@ -32,10 +33,13 @@ export default function JobLog() {
       industry: formData.get('industry'),
       status: formData.get('status'),
     };
+    const database = getDatabase();
+    const userRef = ref(database, `users/${currentUser.userId}/jobs`);
+    firebasePush(userRef, newJob);
     setJobs([...jobs, newJob]);
-    firebasePush(jobsRef, newJob);
     navigate('/dashboard');
   };
+  
 
   const database = getDatabase();
   const jobsRef = ref(database, "jobs");

@@ -52,7 +52,7 @@ export default function App() {
         <Route path="/add-job" element={<JobLog currentUser={currentUser}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard currentUser={currentUser}/>} />
         <Route path="/login" element={<Login currentUser={currentUser}/>} />
         <Route path="/profile" element={<Profile currentUser={currentUser} />} />
       </Routes>

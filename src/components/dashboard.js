@@ -2,29 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, Link} from 'react-router-dom';
 import { getDatabase, ref, onValue, update } from 'firebase/database';
 
-export default function Dashboard() {
+export default function Dashboard(props) {
+  const currentUser = props.currentUser;
   const location = useLocation();
   const jobs = location.state?.jobs || [];
   const [jobsList, setJobs] = useState([]);
 
   useEffect(() => {
     const database = getDatabase();
-    const jobsRef = ref(database, 'jobs');
-    onValue(jobsRef, (snapshot) => {
+    const userRef = ref(database, `users/${currentUser.userId}/jobs`);
+    onValue(userRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        const jobList = Object.keys(data).map((key) => {
-          return {
-            id: key,
-            ...data[key],
-          };
-        });
-        setJobs(jobList);
-      } else {
-        setJobs([]);
+        const jobs = Object.values(data);
+        setJobs(jobs);
       }
     });
-  }, []);
+  }, [currentUser]);
 
   const [statusFilter, setStatusFilter] = useState('All');
 
