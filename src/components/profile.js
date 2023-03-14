@@ -52,17 +52,12 @@ export default function Profile(props) {
       <div className='card'>
         <div className="profile">
           <p className="profile-welcome">Welcome {props.currentUser.userName && props.currentUser.userName}!</p>
-          {isEditing ? (
-            <ProfileForm currentUser={props.currentUser} onSave={handleSave} />
-          ) : (
             <div className="profile-info">
                 <p>Total Jobs Applied To: {jobsAppliedToCount}</p>
                 <p>Job Interviews: {jobsInterviewCount}</p>
                 <p>Job Offer Pendings: {jobsOfferPendingCount}</p>
                 <p>Job Rejections: {jobsRejectedCount}</p>
-              <button type="button" className="btn btn-light btn-lg" onClick={() => setIsEditing(true)}>Edit Profile</button>
             </div>
-          )}
             <div className="dashboard-link">
               <p>Dashboard</p>
               <Link to="/dashboard">
