@@ -161,6 +161,9 @@ p.checkbox input {
 }
 
 /* Login */
+.login-header {
+
+}
 
 .login-button {
     color: black;
@@ -278,7 +281,12 @@ select {
 
 /* Login */ 
 .login {
+    color: #3c6e71;
     text-align: center;
+    font-size: px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 /* Profile */ 
