@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, Link} from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { getDatabase, ref, onValue, update } from 'firebase/database';
 
 export default function Dashboard(props) {
   const currentUser = props.currentUser;
-  const location = useLocation();
-  const jobs = location.state?.jobs || [];
-  const [jobsList, setJobs] = useState([]);
+  const [jobsList, setJobsList] = useState([]);
+  const [fullJobsList, setFullJobsList] = useState([]);
+  const [statusFilter, setStatusFilter] = useState('All');
 
   useEffect(() => {
     const database = getDatabase();
@@ -14,13 +14,34 @@ export default function Dashboard(props) {
     onValue(userRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        const jobs = Object.values(data);
-        setJobs(jobs);
+        const jobList = Object.keys(data).map((key) => {
+          return {
+            id: key,
+            ...data[key],
+          };
+        });
+        setJobsList(jobList);
+      } else {
+        setJobsList([]);
+      }
+    });
+
+    const jobsRef = ref(database, 'jobs');
+    onValue(jobsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const jobs = Object.keys(data).map((key) => {
+          return {
+            id: key,
+            ...data[key],
+          };
+        });
+        setFullJobsList(jobs);
+      } else {
+        setFullJobsList([]);
       }
     });
   }, [currentUser]);
-
-  const [statusFilter, setStatusFilter] = useState('All');
 
   const handleFilterChange = (event) => {
     setStatusFilter(event.target.value);
@@ -28,16 +49,22 @@ export default function Dashboard(props) {
 
   const handleStatusChange = (jobId, status) => {
     const database = getDatabase();
+    const userJobRef = ref(database, `users/${currentUser.userId}/jobs/${jobId}`);
+    update(userJobRef, { status })
+      .catch((error) => {
+        console.error(error);
+      });
+
     const jobRef = ref(database, `jobs/${jobId}`);
     update(jobRef, { status })
       .then(() => {
-        const updatedJobsList = jobsList.map((job) => {
+        const updatedJobsList = fullJobsList.map((job) => {
           if (job.id === jobId) {
             return { ...job, status };
           }
           return job;
         });
-        setJobsList(updatedJobsList);
+        setFullJobsList(updatedJobsList);
       })
       .catch((error) => {
         console.error(error);
@@ -66,7 +93,7 @@ export default function Dashboard(props) {
         <Link to="/add-job">
           <button type="button" className="btn btn-light btn-lg">Add a job</button>
         </Link>   
-      </div>   
+      </div>  
       <main>
         <div className="table-container">
           <table>
